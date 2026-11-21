@@ -1,8 +1,5 @@
 <?php
-$produit = "";
-$quantité = "";
-$prix = "";
-$message = "";
+
 if (
     isset($_POST["produit"])
     && isset($_POST["quantité"])
@@ -14,14 +11,13 @@ if (
     $prix = $_POST["prix"];
     if (
         $produit != ""
-        && $quantité > 0
         && $prix > 0
+        && $quantité > 0
     ) {
-        $totale = $quantité * $prix;
-        $message = "produit traite avec succes";
-    } else {
-        $message = "veuillez saisir des donneés valides";
+        $total =  $prix * $quantité ;
+
     }
+   
 }
 
 
@@ -70,11 +66,11 @@ if (
 
         <div>
 
-            <label for="quantite">
+            <label for="quantité">
                 Quantité :
             </label>
 
-            <input type="number" id="quantite" name="quantite" min="1" required>
+            <input type="number" id="quantité" name="quantité" min="1" required>
 
         </div>
 
@@ -86,28 +82,11 @@ if (
 
     </form>
 
-
-    <?php
-
-    if ($message != "") {
-
-        echo "<hr>";
-
-        echo "<h2>" . $message . "</h2>";
-
-    }
-
-    ?>
+<hr>
+ 
 
 
-    <?php
-
-    if (
-        isset($total)
-        && $message == "Produit traité avec succès."
-    ) {
-
-        ?>
+   
 
         <h2>Informations du produit</h2>
 
@@ -118,27 +97,22 @@ if (
 
         <p>
             Prix :
-            <?php echo $prix; ?>
+            <?php echo htmlspecialchars($prix); ?>
             DH
         </p>
 
         <p>
             Quantité :
-            <?php echo $quantite; ?>
+            <?php echo htmlspecialchars($quantité); ?>
         </p>
 
         <p>
             Total :
-            <?php echo $total; ?>
+            <?php echo htmlspecialchars($total); ?>
             DH
         </p>
 
-        <?php
-
-    }
-
-    ?>
-
+        
 </body>
 
 </html>
