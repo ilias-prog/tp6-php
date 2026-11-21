@@ -1,12 +1,12 @@
 <?php 
-$localhost = "localhost";
+$host = "localhost";
+$dbname= "tp_php";
 $username = "root"; 
 $password = "";
-$dbname= "tp-php";
 try{
 
 
-    $pdo = new PDO( "mysql:host=$host; dbname=$dbname; charset=utf8mb4 ",
+    $pdo = new PDO( "mysql:host=$host; dbname=$dbname",
     $username, 
     $password);
     

@@ -4,11 +4,13 @@ if (
     isset($_POST["produit"])
     && isset($_POST["quantité"])
     && isset($_POST["prix"])
+    && isset($_POST["categorie"])
 ) {
 
     $produit = $_POST["produit"];
     $quantité = $_POST["quantité"];
     $prix = $_POST["prix"];
+    $categorie = $_POST["categorie"];
     if (
         $produit != ""
         && $prix > 0
@@ -70,7 +72,12 @@ if (
                 Quantité :
             </label>
 
-            <input type="number" id="quantité" name="quantité" min="1" required>
+            <input type="number" id="quantité" name="quantité" min="1" required><br><br>
+            <label for="categorie">
+                catégorie :
+            </label>
+
+            <input type="text" id="categorie" name="categorie" min="1" required>
 
         </div>
 
@@ -106,6 +113,11 @@ if (
             <?php echo htmlspecialchars($quantité); ?>
         </p>
 
+        <p>
+            categorie :
+            <?php echo htmlspecialchars($categorie); ?>
+
+        </p>
         <p>
             Total :
             <?php echo htmlspecialchars($total); ?>
