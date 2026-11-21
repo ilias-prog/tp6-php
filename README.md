@@ -74,16 +74,7 @@ Depuis un serveur web local :
 
 Le fichier `03-get.php` peut aussi être testé sans paramètre : il utilise alors « ilias » comme valeur par défaut.
 
-## Exemple de base de données
 
-Les exemples affichés dans `07-select.php` correspondent à une table `products` contenant au moins les colonnes suivantes :
-
-| Colonne | Type attendu | Exemple |
-| --- | --- | --- |
-| `id` | entier | `1` |
-| `name` | texte | `Laptop` |
-| `price` | décimal | `8500.00` |
-| `quantity` | entier | `2` |
 
 ## Points observés dans le rapport
 
