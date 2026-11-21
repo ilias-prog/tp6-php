@@ -86,6 +86,6 @@ Le fichier `03-get.php` peut aussi être testé sans paramètre : il utilise alo
 - Le nom réel du fichier est `06-conexion.php`, alors que `07-select.php` demande `06-connexion.php` ; ces noms doivent être identiques.
 - `07-select.php` utilise correctement PDO avec `fetchAll(PDO::FETCH_ASSOC)`.
 - `database/dataBase.sql` est vide et doit contenir le script de création de la base si ce fichier est utilisé pour l'installation.
-- Le prix est affiché en dirhams (DH).
+- Le prix est affiché en dirhams 
 
 
